@@ -139,7 +139,7 @@
                         <div class="cart-info">
                             <div class="cart-text">
                                 <div class="card-text-blur">
-                                    <p>КВАРТИРА</p>
+                                    <p>КВАРА</p>
                                 </div>
                             </div>
                             <div class="cart-text">
