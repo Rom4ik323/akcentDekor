@@ -7,49 +7,25 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{asset('/css/main.css')}}" rel="stylesheet" >
     <script src="/js/jquery-3.6.4.min.js"></script>
-    <title>main</title>
+    <title>Дизайн</title>
 </head>
 <body>
     <div class="banner" style="background-image: url({{ asset('/img/bg1.jpg') }});">
         <div class="banner-low d-flex flex-column justify-content-between">
-            <div class="navbar">
-                <div class="w-100 nav-container">
-                    <div class="logo">
-                        <img style="width: 90px;" src="{{ asset('/img/logo.png') }}" alt="">
-                    </div>
-                    <input class="checkbox" type="checkbox" name="" id="" />
-                    <div class="hamburger-lines">
-                        <span class="line line1"></span>
-                        <span class="line line2"></span>
-                        <span class="line line3"></span>
-                    </div>
-                    <div class="menu-items">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">blogs</a></li>
-                        <li><a href="#">portfolio</a></li>
-                        <li><a href="#">contact</a></li>
-                    </div>
+            @extends('layouts.layout1')
+
+            @section('content')
+                <div class="container w-50 mt-2">
+                        @if (\Session::has('success'))
+                            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                                <ul>
+                                        <li>{!! \Session::get('success') !!}</li>
+                                </ul>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                            </div>
+                        @endif
                 </div>
-            </div>
-            <nav class="navigation" style="width: 80%;">
-                <img class="navigation-logo" src="{{ asset('/img/logo.png') }}" alt="">
-                <ul class="navigation-list w-75 d-flex text-light pt-3 linking justify-content-end">
-                    <li class="navigation-list-item pe-5">
-                        <a class="nav-link" aria-current="page" href="">Главная</a>
-                    </li>
-                    <li class="navigation-list-item pe-5">
-                        <a class="nav-link" aria-current="page" href="">Декор</a>
-                    </li>
-                    <li class="navigation-list-item pe-5">
-                        <a class="nav-link" aria-current="page" href="">Картины</a>
-                    </li>
-                    <li class="navigation-list-item pe-5">
-                        <a class="nav-link" aria-current="page" href="">Контакты</a>
-                    </li>
-                </ul>
-                <button class="navigation-button ms-5 me-1">Войти</button>
-            </nav>
+
             <div class="banner-content m-auto text-light" style="width: 80%;">
                 <h1>Делаем дизайн-проекты <br> для домов и квартир</h1>
                 <div class="banner-content-buttons mt-4">
@@ -139,7 +115,7 @@
                         <div class="cart-info">
                             <div class="cart-text">
                                 <div class="card-text-blur">
-                                    <p>КВАРА</p>
+                                    <p>КВАРтирА</p>
                                 </div>
                             </div>
                             <div class="cart-text">
@@ -153,5 +129,72 @@
                 </div>
             </div>
         </div>
-</body>
-</html>
+    <div class="projects-button">
+        <button>все проекты</button>
+    </div>
+    <h2 class="project-h">Мы создаем интерьеры, <br>в которых удобно жить</h2>
+    <div class="advantages">
+        <div class="advantages-items">
+            <div class="advantages-item" style="background-image: url({{ asset('/img/advantages1.png') }});">
+                <div class="advantages-blur">
+                    <div class="icons">
+                        <img src="{{ asset('/img/icon1.png') }}" alt="">
+                    </div>
+                    <div class="advantages-text">
+                        <p>Функциональность и эргономика для нас не просто слова</p>
+                    </div>
+                </div>
+            </div>
+            <div class="advantages-item" style="background-image: url({{ asset('/img/advantages2.png') }});">
+                <div class="advantages-blur">
+                    <div class="icons">
+                        <img src="{{ asset('/img/icon2.png') }}" alt="">
+                        <img src="{{ asset('/img/icon3.png') }}" alt="">
+                        <img src="{{ asset('/img/icon4.png') }}" alt="">
+                        <img src="{{ asset('/img/icon5.png') }}" alt="">
+                    </div>
+                    <div class="advantages-text">
+                        <p>Учитываем все, до мелочей: электрику, вентиляцию, шумоизоляцию и освещение</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="advantages-items">
+            <div class="advantages-item" style="background-image: url({{ asset('/img/advantages3.png') }});">
+                <div class="advantages-blur">
+                    <div class="icons">
+                        <img src="{{ asset('/img/icon2.png') }}" alt="">
+                    </div>
+                    <div class="advantages-text">
+                        <p>Никогда не упорствуем: интерьер должен отражать вкус и стиль хозяина</p>
+                    </div>
+                </div>
+            </div>
+            <div class="advantages-item" style="background-image: url({{ asset('/img/advantages4.png') }});">
+                <div class="advantages-blur">
+                    <div class="icons">
+                        <img src="{{ asset('/img/icon6.png') }}" alt="">
+                    </div>
+                    <div class="advantages-text">
+                        <p>Проектируем, используя реальные материалы, помогаем купить выгодно</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form" style="background-image: url({{ asset('/img/bg2.jpg') }});">
+        <div class="form-help">
+            <form>
+                <h2 class="pt-4 form-h">НАПИСАТЬ НАМ</h2>
+                <div class="form-inputs">
+                    <input placeholder="Имя" class="form-input mb-2">
+                    <input placeholder="+7 (999) 000-00-00" class="form-input mb-2">
+                    <input placeholder="Комментарий" class="form-input mb-2">
+{{--                    <input type="checkbox" class="form-check-input" id="exampleCheck1">--}}
+{{--                    <label class="form-check-label" for="exampleCheck1">Я даю свое согласие на обработку моих персональных данных, на условиях и в соответствии с целями, указанными в Политике обработки персональных данных</label>--}}
+                    <button type="submit">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+@endsection
