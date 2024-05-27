@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.layout1')
 
 @section('content')
 
@@ -70,7 +70,7 @@
         </div>
     </div>
     <div class="container mt-4">
-        <h3 class="w-75 m-auto text-center">Вы можете заказать полный дизайн проект, частичный дизайн проект, хоум стейджинг, готовые варианты эконом ремонтов,</h3>
+        <h3 class="w-75 m-auto text-center">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for</h3>
     </div>
     <hr class="m-auto w-75 mt-5 mb-5">
 
@@ -81,7 +81,7 @@
             <h3 class="text-center">Lorem ipsum is placeholder text commonly used in the graphic.</h3>
             <h4 class="text-center">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.
                 LOREM IPSUM GENERATOR</h4>
-            <div class=" m-auto dekor-imgs d-flex align-items-center flex-column">
+            <div class="m-auto dekor-imgs d-flex align-items-center flex-column">
                 <img class="dekor-img-item" src="{{ asset('/img/decor1.png') }}"></img>
                 <div class="w-75 dekor-img-items mt-5 d-flex justify-content-between">
 

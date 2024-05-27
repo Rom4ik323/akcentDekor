@@ -1,4 +1,4 @@
-@extends('layouts.layout')
+@extends('layouts.admin')
 @section('title', 'Проекты')
 @section('content')
     <h1 class="m-4 text-center">Управление проектами</h1>

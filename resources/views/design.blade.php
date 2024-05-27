@@ -6,6 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="{{asset('/css/main.css')}}" rel="stylesheet" >
+    <link rel="shortcut icon" href="{{asset('/img/favicon.ico')}}" type="image/x-icon">
+    <link rel="icon" href="{{asset('/img/favicon.ico')}}" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <script src="/js/jquery-3.6.4.min.js"></script>
     <title>Дизайн</title>
 </head>
@@ -29,8 +33,8 @@
             <div class="banner-content m-auto text-light" style="width: 80%;">
                 <h1>Делаем дизайн-проекты <br> для домов и квартир</h1>
                 <div class="banner-content-buttons mt-4">
-                    <button class="banner-content-button">Услуги и цены</button>
-                    <button class="banner-content-button">Идеи интерьера</button>
+                    <a href="/projects"><button class="banner-content-button">Наши проеты</button></a>
+                    <a href="/order"><button class="banner-content-button">Сделать заказ</button></a>
                 </div>
             </div>
         </div>
@@ -130,7 +134,7 @@
             </div>
         </div>
     <div class="projects-button">
-        <button>все проекты</button>
+        <a href="/projects"><button>все проекты</button></a>
     </div>
     <h2 class="project-h">Мы создаем интерьеры, <br>в которых удобно жить</h2>
     <div class="advantages">
@@ -184,14 +188,14 @@
     </div>
     <div class="form" style="background-image: url({{ asset('/img/bg2.jpg') }});">
         <div class="form-help">
-            <form>
+            <form action="{{route('app.store')}}" method="POST">
+                @csrf
                 <h2 class="pt-4 form-h">НАПИСАТЬ НАМ</h2>
                 <div class="form-inputs">
-                    <input placeholder="Имя" class="form-input mb-2">
-                    <input placeholder="+7 (999) 000-00-00" class="form-input mb-2">
-                    <input placeholder="Комментарий" class="form-input mb-2">
-{{--                    <input type="checkbox" class="form-check-input" id="exampleCheck1">--}}
-{{--                    <label class="form-check-label" for="exampleCheck1">Я даю свое согласие на обработку моих персональных данных, на условиях и в соответствии с целями, указанными в Политике обработки персональных данных</label>--}}
+                    <input name="name" placeholder="Имя" class="form-input mb-2">
+                    <input name="number" placeholder="+7 (999) 000-00-00" class="form-input mb-2" data-phone-pattern required>
+                    <input name="comment" placeholder="Комментарий" class="form-input mb-2">
+                    <input style="display: none!important;" name="service" value="Дизайн">
                     <button type="submit">Отправить</button>
                 </div>
             </form>

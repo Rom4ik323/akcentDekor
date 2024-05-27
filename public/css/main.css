@@ -197,6 +197,104 @@
   }
 }
 
+@media screen and (max-width: 1380px){
+    .cart-text{
+        font-size: 12px;
+    }
+
+    .advantages{
+        flex-direction: column;
+    }
+
+    .advantages-items{
+        justify-content: space-between;
+        width: auto!important;
+    }
+
+    .advantages-item{
+        width: 39vw!important;
+        margin: 0 0 10px 0!important;
+    }
+
+    .show{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #carouselExample{
+        width: 100%!important;
+    }
+}
+
+@media screen and (max-width: 1140px){
+    .cart-text{
+        font-size: 18px;
+    }
+    .form-inputs{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .form .form-help {
+        padding-top: 280px!important;
+    }
+
+    .form-h{
+        text-align: center;
+    }
+
+    form button{
+        width: 290px!important;
+    }
+
+    .project-card-minis{
+        flex-direction: column;
+    }
+
+    .project-card-mini{
+
+    }
+
+    .projects{
+        width: 100%!important;
+    }
+
+    .project-row1{
+        display: none;
+    }
+
+    .project-col{
+        display: block;
+    }
+
+    .project-row{
+        width: 100%!important;
+    }
+
+    .project-card-max{
+        width: 100%!important;
+        height: 60vw!important;
+    }
+
+    .project-card-mini{
+        width: 100%!important;
+        height: 60vw!important;
+    }
+
+    .cart-text{
+        width: 40%!important;
+    }
+    .project-h{
+        width: 100%;
+        text-align: center;
+    }
+    .project-card-blur{
+        height: 60vw!important;
+    }
+}
+
 @media screen and (max-width: 990px){
 .navbar{
     display: flex!important;
@@ -207,7 +305,7 @@
 }
 
 .banner-content h1{
-    font-size: 35px!important;
+    font-size: 40px!important;
 }
 
 .banner-content-buttons{
@@ -221,9 +319,64 @@
 
 }
 
+@media screen and (max-width: 800px){
+    .advantages{
+        width: 100%!important;
+        margin: 0!important;
+    }
+
+    .project-h{
+        font-size: 35px!important;
+    }
+
+    .project-card-mini{
+        margin-top: 10px!important;
+    }
+
+    .advantages-items{
+        flex-direction: column;
+    }
+
+    .advantages-item{
+        width: 100%!important;
+        height: 60vw!important;
+    }
+
+    .advantages-blur{
+        height: 60vw!important;
+    }
+
+    .icons{
+        flex-direction: row!important;
+    }
+
+    .icons img{
+        margin-right: 5px;
+    }
+}
+@media screen and (max-width: 450px){
+    .form .form-help {
+        width: 290px!important;
+    }
+}
+html,
 body {
     font-family: "Poppins", sans-serif;
+    background-color: #F3F2EE!important;
+    height: 100%!important;
 }
+
+.wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+/*footer {*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    width: 100%;*/
+/*}*/
 
 .navigation{
     display: flex;
@@ -534,6 +687,35 @@ body {
     text-transform: uppercase;
 }
 
+.text button {
+    color: #ffffff;
+    border-radius: 0px;
+    font-size: 14px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: #000000;
+    height: 50px;
+    text-transform: uppercase;
+    width: 180px;
+    border: 0;
+}
+.project-h2{
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 42px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.text{
+    font-family: 'Roboto', sans-serif!important;
+    font-weight: 300;
+
+}
+
 .project-card-max{
     width: 45vw;
     height: 25vw;
@@ -612,8 +794,8 @@ body {
     height: 30vw;
 }
 .project-card-mini{
-    margin-top: 20px;
-    width:  20vw;
+    margin-top: 1vw;
+    width:  22vw;
     height: 30vw;
     background-position: center center;
     background-repeat: no-repeat;
@@ -660,12 +842,298 @@ body {
     margin-left: 20px;
 }
 
+.project-card-mini1{
+    margin-top: 1vw;
+    height: 18vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.project-card-mini1 .cart-text{
+    text-transform: uppercase;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    color: whitesmoke;
+    backdrop-filter: blur(10px);
+    width: 30%;
+    text-align: center;
+    border: 1px solid whitesmoke;
+    margin-left: 20px;
+}
+
+.project-card-mini1 .project-card-blur{
+    height: 18vw;
+}
+
+.projects-button {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.projects-button button{
+
+    background-color: #252525;
+    width: 100%;
+    height: 50px;
+    margin: auto!important;
+    border: 1px solid #d8d8d8;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    margin-top: auto;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.projects-button button:hover{
+    background-color: #4F4E4E;
+    transition: 0.5s;
+}
+
+.advantages{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages-items{
+    display: flex;
+    justify-content: space-between;
+    width: 48%;
+
+}
+
+.advantages-item{
+    height: 29vw;
+    width:  18vw;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.advantages-blur{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(0turn,rgba(29,26,20,1) 0%,rgba(48,18,7,0) 100%);
+    height: 29vw;
+}
+
+.icons{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.icons img{
+    width: 40px;
+    height: 39px;
+    margin-bottom: 5px;
+}
+
+.advantages-text{
+    width: 90%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    margin: auto;
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+.form{
+    width: 80%;
+    height: 500px;
+    margin: auto;
+    margin-top: 80px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.form .form-help{
+    padding-top: 380px;
+    width: 80%;
+    margin: auto;
+}
+
+.form form{
+    background-color: white;
+}
+
+.form-inputs{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.reg .form-input{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    width: 400px;
+}
+
+.form-input{
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 400;
+    height: 50px;
+    width: 290px;
+}
+.form-h{
+    width: 90%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 38px;
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.form-input::placeholder {
+    padding: 14px;
+}
+
+form button{
+    color: #ffffff;
+    border-radius: 0px;
+    font-size: 14px;
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: #000000;
+    height: 50px;
+    text-transform: uppercase;
+    width: 180px;
+    border: 0;
+}
+
+.checkbox-ind{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #000;
+    box-sizing: border-box;
+    margin-right: 10px;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    opacity: .6;
+}
+
+hr{
+    margin-bottom: 0!important;
+}
+
+footer{
+    background-color: white;
+}
+.card{
+    padding: 0!important;
+    border: 0!important;
+    border-radius: 0!important;
+}
+
+.card img{
+    padding: 0!important;
+    border: 0!important;
+    border-radius: 0!important;
+}
+.painting-banner{
+    height: 500px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #464646;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.painting-banner h2{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 64px!important;
+    text-align: center;
+    color: white;
+}
+
+.learning h2{
+    font-family: "Roboto Mono", monospace;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 64;
+    text-align: center;
+    color: white;
+    padding-top: 40px;
+}
+.card{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+.decor-img{
+    height: 330px;
+    width: 450px;
+}
+
+.decor-ex img{
+    height: 280px;
+    width: 380px;
+}
+
+.card-btn{
+    background-color: #252525;
+    width: 100%;
+    height: 50px;
+    margin: auto!important;
+    border: 1px solid #d8d8d8;
+    color: white;
+    font-family: "Roboto Mono", monospace;
+    font-size: 20px;
+    margin-top: auto;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.card-btn:hover{
+    background-color: #4F4E4E;
+    transition: 0.5s;
+}
 /* general styling */
 
+.blur-banner{
+    background-image: -webkit-gradient( linear, left top, left bottom, from(rgba(36,28,21,0)), to(rgba(36,28,21,1)));
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-
-
-
+.usl-item{
+    border: 1px solid black;
+}
 h1 {
     font-weight: 400;
     text-transform: uppercase;
